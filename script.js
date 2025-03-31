@@ -35,6 +35,18 @@ const movies = {
             seasons: 5,
             match: 99,
             genre: ["Crime", "Drama", "Thriller"]
+        },
+        {
+            id: 4,
+            title: "KGF: Chapter 1",
+            image: "https://images.pexels.com/photos/7234219/pexels-photo-7234219.jpeg",
+            description: "The story of a young rebel who rises to become the king of a gold mine and the underworld.",
+            year: 2018,
+            rating: "UA",
+            duration: "2h 35m",
+            match: 97,
+            genre: ["Action", "Drama"],
+            free: true
         }
     ]
 };
