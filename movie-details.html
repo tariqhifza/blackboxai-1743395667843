@@ -41,13 +41,31 @@
                     </div>
                     <p class="text-lg max-w-2xl mb-8">When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces and one strange little girl.</p>
                     <div class="flex space-x-4">
-                        <button class="bg-white text-black px-6 py-2 rounded font-bold flex items-center">
+                        <button class="bg-white text-black px-6 py-2 rounded font-bold flex items-center" onclick="playMovie()">
                             <i class="fas fa-play mr-2"></i> Play
                         </button>
                         <button class="bg-gray-600 bg-opacity-70 text-white px-6 py-2 rounded font-bold flex items-center">
                             <i class="fas fa-plus mr-2"></i> My List
                         </button>
+                        <div id="free-badge" class="hidden bg-green-500 text-white px-4 py-2 rounded-full font-bold flex items-center">
+                            <i class="fas fa-gift mr-2"></i> Free to Watch
+                        </div>
                     </div>
+                    <script>
+                        function playMovie() {
+                            const urlParams = new URLSearchParams(window.location.search);
+                            const movieId = parseInt(urlParams.get('id'));
+                            const movie = [...movies.trending, ...movies.topPicks].find(m => m.id === movieId);
+                            
+                            if (movie && movie.free) {
+                                // Play movie directly for free content
+                                alert(`Now playing: ${movie.title}\nEnjoy your free movie!`);
+                            } else {
+                                // Redirect to login for paid content
+                                window.location.href = 'login.html';
+                            }
+                        }
+                    </script>
                 </div>
             </div>
         </section>
