@@ -53,11 +53,18 @@
         <h2 class="text-2xl font-bold mb-6">Trending Now</h2>
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
             <!-- Movie Cards -->
-            <div class="movie-card">
-                <img src="https://images.pexels.com/photos/33129/popcorn-movie-party-entertainment.jpg" alt="Movie 1" class="w-full h-auto rounded">
-                <p class="mt-2 text-sm">Movie Title 1</p>
-            </div>
-            <!-- Repeat for 5 more movies -->
+                    <div class="movie-card relative" data-movie-id="4">
+                        <img src="https://images.pexels.com/photos/7234219/pexels-photo-7234219.jpeg" alt="KGF: Chapter 1" class="w-full h-auto rounded">
+                        <p class="mt-2 text-sm">KGF: Chapter 1</p>
+                        <div class="absolute top-2 right-2 bg-green-500 text-white text-xs px-2 py-1 rounded-full">
+                            FREE
+                        </div>
+                    </div>
+                    <div class="movie-card" data-movie-id="1">
+                        <img src="https://images.pexels.com/photos/33129/popcorn-movie-party-entertainment.jpg" alt="Stranger Things" class="w-full h-auto rounded">
+                        <p class="mt-2 text-sm">Stranger Things</p>
+                    </div>
+                    <!-- Additional movies -->
         </div>
     </section>
 
